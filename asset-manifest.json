@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/pws21app/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/pws21app/static/js/main.fb18ce75.chunk.js",
+    "main.js.map": "/pws21app/static/js/main.fb18ce75.chunk.js.map",
+    "runtime-main.js": "/pws21app/static/js/runtime-main.06da1bd0.js",
+    "runtime-main.js.map": "/pws21app/static/js/runtime-main.06da1bd0.js.map",
+    "static/js/2.b07182e0.chunk.js": "/pws21app/static/js/2.b07182e0.chunk.js",
+    "static/js/2.b07182e0.chunk.js.map": "/pws21app/static/js/2.b07182e0.chunk.js.map",
+    "static/js/3.32d8027f.chunk.js": "/pws21app/static/js/3.32d8027f.chunk.js",
+    "static/js/3.32d8027f.chunk.js.map": "/pws21app/static/js/3.32d8027f.chunk.js.map",
+    "index.html": "/pws21app/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/pws21app/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.b07182e0.chunk.js.LICENSE.txt": "/pws21app/static/js/2.b07182e0.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/pws21app/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.06da1bd0.js",
+    "static/js/2.b07182e0.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.fb18ce75.chunk.js"
+  ]
+}
