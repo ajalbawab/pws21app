@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages';
@@ -26,7 +26,7 @@ function App() {
     </Switch>
     </Router>
     </div>
-    </AppBackground>
+     </AppBackground>
   );
 }
   

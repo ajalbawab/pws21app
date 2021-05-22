@@ -1,15 +1,10 @@
-
 import React from 'react';
-  
+import styles from "./contact.module.css"
+
+
 const Contact = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'Right',
-        alignItems: 'Right',
-        height: '100vh'
-      }}
+    <div className={styles.header}
     >
       <h1>Contact Us</h1>
     </div>
