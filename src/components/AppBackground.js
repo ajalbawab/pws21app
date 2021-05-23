@@ -7,7 +7,8 @@ function AppBackground({children}) {
             backgroundImage: "url(/background.jpg)",
             backgroundPosition: 'center',
             backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
+            backgroundRepeat: 'no-repeat',
+            backgroundAttachment:'fixed'
             }}
             >
      

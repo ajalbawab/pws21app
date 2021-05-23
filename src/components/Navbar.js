@@ -1,9 +1,12 @@
 import React from 'react';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const NavBar = () => {
+  let history = useHistory();
+
   return (
     <Navbar bg="dark" variant="dark">
     <Navbar.Brand href="/">
@@ -16,9 +19,15 @@ const NavBar = () => {
   />
     </Navbar.Brand>
     <Nav className="mr-auto">
-      <Nav.Link href="/about">About</Nav.Link>
-      <Nav.Link href="/team">Team</Nav.Link>
-      <Nav.Link href="/contact">Contact</Nav.Link>
+      <div style={styles.link} onClick={() => {
+        history.push('/about');
+      }}>About</div>
+      <div style={styles.link} onClick={() => {
+        history.push('/team');
+      }} >Team</div>
+      <div style={styles.link} onClick={() => {
+        history.push('/contact');
+      }} >Contact</div>
     </Nav>
     <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -27,5 +36,14 @@ const NavBar = () => {
   </Navbar>
   );
 };
+
+const styles = {
+  link: {
+    display: 'flex',
+    padding: '.5rem 2rem',
+    color: 'white',
+    cursor: 'pointer',
+  }
+}
 
 export default NavBar;

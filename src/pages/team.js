@@ -1,10 +1,10 @@
 
 import React from 'react';
 import styles from "./team.module.scss"
-
-const imgUrls = ['/cohort/aj.jpeg','/cohort/jael.jpeg','/cohort/bronson.jpeg','/cohort/cameron.jpeg','/cohort/cato.jpg','/cohort/cher.jpeg','/cohort/georgia.jpeg','/cohort/jenelle.jpeg','/cohort/jennifer.jpeg','/cohort/jonghwa.jpeg','/cohort/leonard.jpeg','/cohort/milton.jpeg','/cohort/minh.jpeg','/cohort/nicky.jpeg','/cohort/pranshu.jpeg','/cohort/randall.jpeg','/cohort/reed.jpeg','/cohort/will.jpeg'
+import AppBackground from "../components/AppBackground"
+const imgUrls = ['/cohort/aj.jpeg','/cohort/jael.jpeg','/cohort/bronson.jpeg','/cohort/cameron.jpeg','/cohort/cato.jpeg','/cohort/cher.jpeg','/cohort/georgia.jpeg','/cohort/jenelle.jpeg','/cohort/jennifer.jpeg','/cohort/jonghwa.jpeg','/cohort/leonard.jpeg','/cohort/milton.jpeg','/cohort/minh.jpeg','/cohort/nicky.jpeg','/cohort/pranshu.jpeg','/cohort/randall.jpeg','/cohort/reed.jpeg','/cohort/will.jpeg'
 ];
-// const names = ['AJ Al-Bawab','Jael Ortiz','a','n','m','l','k','i','h','a','b','b'];
+const names = ['AJ Al-Bawab','Jael Ortiz','Bronson Slattery','Cameron Vandewiele','Armani Cato','Cherechi Amalaha','Georgia Green','Jenelle Ryan','Jennifer Cruz','Jonghwa Baek','Leonard Cave','Milton Wilkes','Minh Le','Nicky Park','Pranshu Srivastav','Randall Anderson','Reed Deane','Will Long'];
 
 
 class Gallery extends React.Component {
@@ -20,9 +20,12 @@ class Gallery extends React.Component {
     return (
       <div onClick={(e) => this.openModal(e, index)}>
         <img src={src} alt='' key={src} style={{}} />
-        {/* <p style={{textAlign:'center'}}> */}
-          {/* {names[index]} */}
-        {/* </p> */}
+        <div style={{margin:10, backgroundColor:'white',borderRadius:10}}>
+
+        <p style={{textAlign:'center', color:'black'}}>
+          {names[index]}
+        </p>
+        </div>
       </div>
     ) 
   }
