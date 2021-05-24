@@ -4,10 +4,16 @@ import styles from "./contact.module.css"
 
 const Contact = () => {
   return (
-    <div className={styles.header}
-    >
-      <h1>Contact Us</h1>
-    </div>
+  
+    <div style={{height: '100vh'}}>
+
+    <div className={styles.appbody}>
+     
+
+    <h1  className={styles.header1}>Contact</h1>
+      </div>
+  
+     </div>
   );
 };
   

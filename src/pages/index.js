@@ -1,16 +1,16 @@
 import React from 'react';
+import styles from "./index.module.css"
   
 const Home = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'Right',
-        alignItems: 'Right',
-        height: '100vh'
-      }}
-    >
-      <h1>Welcome to Panthers on Wall Street 2021!</h1>
+    <div style={{height:'100vh'}}>
+
+<div className={styles.appbody}>
+     
+
+     <h1  className={styles.header1}>PWS 21</h1>
+       </div>
+   
     </div>
   );
 };

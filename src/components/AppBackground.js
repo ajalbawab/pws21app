@@ -8,7 +8,8 @@ function AppBackground({children}) {
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            backgroundAttachment:'fixed'
+            backgroundAttachment:'fixed',
+           
             }}
             >
      

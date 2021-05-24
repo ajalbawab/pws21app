@@ -111,7 +111,10 @@ class Gallery extends React.Component {
   render() {
     return (
       <div className={styles.gallery_container}>
+        <div className={styles.h1container}>
+
         <h1>Panthers on Wall Street 2021</h1>
+        </div>
         <div className={styles.gallery_grid}>
 
         {listItems.map(this.renderImageContent)}
@@ -193,8 +196,8 @@ class GalleryModal extends React.Component {
 
 
             {/* <a href="/" className={styles.modal_close} onClick={closeModal} onKeyDown={this.handleKeyDown}>&times;</a> */}
-            {/* {hasPrev && <a href="/" className={styles.modal_prev} onClick={findPrev} onKeyDown={this.handleKeyDown}>&lsaquo;</a>} */}
-            {/* {hasNext && <a href="/" className={styles.modal_next} onClick={findNext} onKeyDown={this.handleKeyDown}>&rsaquo;</a>} */}
+            {hasPrev && <a href="/" className={styles.modal_prev} onClick={findPrev} onKeyDown={this.handleKeyDown}>&lsaquo;</a>}
+            {hasNext && <a href="/" className={styles.modal_next} onClick={findNext} onKeyDown={this.handleKeyDown}>&rsaquo;</a>}
           </div>
         </div>
       </div>
@@ -205,10 +208,7 @@ class GalleryModal extends React.Component {
 
 const Team = () => {
   return (
-    <div
-      className={styles.header}
-    >
-      {/* <h1>Below is the 2021 Panthers on Wall Street Cohort!</h1> */}
+    <div>
       <section class={styles.gallery_container}>
       <Gallery />
       </section>
