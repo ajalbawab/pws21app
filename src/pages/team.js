@@ -6,7 +6,16 @@ import AppBackground from "../components/AppBackground"
 
 const cohort = {
   'AJ Al-Bawab':{
-    'image':'/cohort/aj.jpeg'},
+    'image':'/cohort/aj.jpeg',
+    'classstanding':'Senior',
+    'major':'Finance',
+    'gpa':'4.1',
+    'interests':'Coffee',
+    'bio':'Insert Biography Here',
+    'accomplishments':'Insert Accomplishments Here',
+    'resume':'Will have resume attached'
+    },
+
   'Jael Ortiz':{
     'image':'/cohort/jael.jpeg'},
   'Bronson Slattery':{
@@ -150,12 +159,33 @@ class GalleryModal extends React.Component {
         <div className={styles.modal_overlay} onClick={closeModal}></div>
         <div isOpen={!!src} className={styles.modal}>
           <div className={styles.modal_body}>
-           
-        
             <img className={styles.modal_flex_image} src={src} alt="" />
-            
-              {/* <p>{Object.keys(cohort).find(key => cohort[key].image === src)}</p> */}
-            {/* </div> */}
+              <div className={styles.modal_text_box}>
+               <div className={styles.modal_header}>
+                 <p>{Object.keys(cohort).find(key => cohort[key].image === src)}</p>
+               </div>
+
+              <div className={styles.body_container}>
+
+
+               <div className={styles.modal_lightdetails}>
+                 <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>GPA:</div>{cohort[Object.keys(cohort).find(key => cohort[key].image === src)].gpa}</div>
+                 <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>Class Designation:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].classstanding}</div>
+                 <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>Interest:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].interests}</div>
+               </div>
+               <div style={{height:2, backgroundColor:'darkgrey', marginTop:10, marginBottom:10}}> </div>
+               <div className={styles.modal_lightdetails}>
+                 <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>Biography:</div>{cohort[Object.keys(cohort).find(key => cohort[key].image === src)].bio}</div>
+                 <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>Accomplishments:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].accomplishments}</div>
+                 <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>Resume:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].resume}</div>
+               </div>
+
+
+
+              </div>
+             
+              </div>
+              
             {/* <div className={styles.modal_flex_body}> */}
               {/* <p>{Object.keys(cohort).find(key => cohort[key].image === src)}</p> */}
          
