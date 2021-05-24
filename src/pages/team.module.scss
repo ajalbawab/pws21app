@@ -26,14 +26,10 @@ body {
   font-family: helvetica;
   position: relative;
   font-size: 100%;
-
-  // background: #d1913c;
-  // background: -webkit-linear-gradient(to right, #ffd194, #d1913c);
-  // background: linear-gradient(to right, #ffd194, #d1913c);
 }
-.gallery_container {
-  padding: 0.9375rem 0;
-}
+// .gallery_container {
+//   padding: 0.9375rem 0;
+// }
 .gallery_container h1 {
   margin: 2rem 0;
   padding: 0;
@@ -49,8 +45,6 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 8px;
   max-width: 1200px;
-  // max-height: "100%";
-  // grid-template-rows: auto auto 30vh;
   width: 100%;
   margin: 0 auto;
 
@@ -71,20 +65,20 @@ body {
   top: 0;
   left: 0;
 }
-.modal_body a {
-  position: absolute;
-  display: inline;
-  color: black;
-  text-decoration: none;
-  line-height: 36px;
-  font-size: 30px;
-  font-weight: lighter;
-  background: #fff;
-  border-radius: 5px;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-}
+// .modal_body a {
+//   // position: absolute;
+//   // display: inline;
+//   color: black;
+//   text-decoration: none;
+//   line-height: 36px;
+//   font-size: 30px;
+//   font-weight: lighter;
+//   background: #fff;
+//   border-radius: 10;
+//   // height: 40px;
+//   // width: 40px;
+//   // text-align: center;
+// }
 .modal_body .modal_close {
   right: 0;
   top: 0;
@@ -105,23 +99,36 @@ body {
   border-radius: 0 5px 5px 0;
 }
 .modal_body {
-  position: relative;
+  display: flex;
+  width: 200;
+  background-color: white;
+  // text-align: center;
 }
+.modal_body .modal_flex_body {
+  // flex: 1;
+}
+.modal_body .modal_flex_image {
+  width: 40%;
+  height: 100px;
+
+  border: 5px solid #fff;
+}
+
 .modal {
   position: fixed;
   z-index: 999;
   width: 50%;
-  max-width: 800px;
+  max-width: 300px;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
 
-  img {
-    width: 100%;
-    border: 5px solid #fff;
-  }
+  // img {
+  //   width: 100%;
+  //   border: 5px solid #fff;
+  // }
 }
-.gallery_grid div {
+.gallery_grid .imgBlock {
   position: relative;
   cursor: pointer;
   &:before,
@@ -130,7 +137,7 @@ body {
     opacity: 0;
   }
   &:after {
-    content: "\02194";
+    // content: "\02194";
     font-size: 80px;
     position: absolute;
     transform: translate3d(-50%, -50%, 0) rotate(-45deg);

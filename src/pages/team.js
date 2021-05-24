@@ -2,9 +2,51 @@
 import React from 'react';
 import styles from "./team.module.scss"
 import AppBackground from "../components/AppBackground"
-const imgUrls = ['/cohort/aj.jpeg','/cohort/jael.jpeg','/cohort/bronson.jpeg','/cohort/cameron.jpeg','/cohort/cato.jpeg','/cohort/cher.jpeg','/cohort/georgia.jpeg','/cohort/jenelle.jpeg','/cohort/jennifer.jpeg','/cohort/jonghwa.jpeg','/cohort/leonard.jpeg','/cohort/milton.jpeg','/cohort/minh.jpeg','/cohort/nicky.jpeg','/cohort/pranshu.jpeg','/cohort/randall.jpeg','/cohort/reed.jpeg','/cohort/will.jpeg'
-];
-const names = ['AJ Al-Bawab','Jael Ortiz','Bronson Slattery','Cameron Vandewiele','Armani Cato','Cherechi Amalaha','Georgia Green','Jenelle Ryan','Jennifer Cruz','Jonghwa Baek','Leonard Cave','Milton Wilkes','Minh Le','Nicky Park','Pranshu Srivastav','Randall Anderson','Reed Deane','Will Long'];
+
+
+const cohort = {
+  'AJ Al-Bawab':{
+    'image':'/cohort/aj.jpeg'},
+  'Jael Ortiz':{
+    'image':'/cohort/jael.jpeg'},
+  'Bronson Slattery':{
+    'image': '/cohort/bronson.jpeg'},
+  'Cameron Vandewiele':{
+    'image':'/cohort/cameron.jpeg' },
+  'Armani Cato':{
+    'image': '/cohort/cato.jpeg'},
+  'Cherechi Amalaha':{
+    'image': '/cohort/cher.jpeg'},
+  'Georgia Green':{
+    'image': '/cohort/georgia.jpeg'},
+  'Jenelle Ryan':{
+    'image':'/cohort/jenelle.jpeg' },
+  'Jennifer Cruz':{
+    'image':'/cohort/jennifer.jpeg' },
+  'Jonghwa Baek':{
+    'image': '/cohort/jonghwa.jpeg'},
+  'Leonard Cave':{
+    'image': '/cohort/leonard.jpeg'},
+  'Milton Wilkes':{
+    'image': '/cohort/milton.jpeg'},
+  'Minh Le':{
+    'image': '/cohort/minh.jpeg'},
+  'Nicky Park':{
+    'image': '/cohort/nicky.jpeg'},
+  'Pranshu Srivastav': {
+    'image':'/cohort/pranshu.jpeg'},
+  'Randall Anderson': {
+    'image':'/cohort/randall.jpeg'},
+  'Reed Deane':{
+    'image': '/cohort/reed.jpeg'},
+  'Will Long': {
+    'image':'/cohort/will.jpeg'}}
+
+
+
+const listItems = []
+
+Object.keys(cohort).map((key) => listItems.push(cohort[key].image));
 
 
 class Gallery extends React.Component {
@@ -17,15 +59,18 @@ class Gallery extends React.Component {
     this.renderImageContent = this.renderImageContent.bind(this);
   }
   renderImageContent(src, index) {
-    return (
-      <div onClick={(e) => this.openModal(e, index)}>
-        <img src={src} alt='' key={src} style={{}} />
-        <div style={{margin:10, backgroundColor:'white',borderRadius:10}}>
 
-        <p style={{textAlign:'center', color:'black'}}>
-          {names[index]}
-        </p>
+    return (
+      <div>
+
+      <div className={styles.imgBlock} onClick={(e) => this.openModal(e, index)}>
+        <img src={src} alt='' key={src} style={{}} />
         </div>
+        <div style={{margin:10, backgroundColor:'white',borderRadius:10}}>
+        <p style={{textAlign:'center', color:'black'}}>
+          {Object.keys(cohort).find(key => cohort[key] === src)}
+        </p>
+      </div>
       </div>
     ) 
   }
@@ -59,7 +104,8 @@ class Gallery extends React.Component {
       <div className={styles.gallery_container}>
         <h1>Panthers on Wall Street 2021</h1>
         <div className={styles.gallery_grid}>
-          {imgUrls.map(this.renderImageContent)}
+
+        {listItems.map(this.renderImageContent)}
         
         </div>
         <GalleryModal 
@@ -67,8 +113,8 @@ class Gallery extends React.Component {
           findPrev={this.findPrev} 
           findNext={this.findNext} 
           hasPrev={this.state.currentIndex > 0} 
-          hasNext={this.state.currentIndex + 1 < imgUrls.length} 
-          src={imgUrls[this.state.currentIndex]} 
+          hasNext={this.state.currentIndex + 1 < listItems.length} 
+          src={listItems[this.state.currentIndex]} 
         />
       </div>
     )
@@ -97,7 +143,6 @@ class GalleryModal extends React.Component {
   render () {
     const { closeModal, hasNext, hasPrev, findNext, findPrev, src } = this.props;
     if (!src) {
-      console.log('whut')
       return null;
     }
     return (
@@ -105,10 +150,21 @@ class GalleryModal extends React.Component {
         <div className={styles.modal_overlay} onClick={closeModal}></div>
         <div isOpen={!!src} className={styles.modal}>
           <div className={styles.modal_body}>
-            <a href="/" className={styles.modal_close} onClick={closeModal} onKeyDown={this.handleKeyDown}>&times;</a>
-            {hasPrev && <a href="/" className={styles.modal_prev} onClick={findPrev} onKeyDown={this.handleKeyDown}>&lsaquo;</a>}
-            {hasNext && <a href="/" className={styles.modal_next} onClick={findNext} onKeyDown={this.handleKeyDown}>&rsaquo;</a>}
-            <img src={src} alt="" />
+           
+        
+            <img className={styles.modal_flex_image} src={src} alt="" />
+            
+              {/* <p>{Object.keys(cohort).find(key => cohort[key].image === src)}</p> */}
+            {/* </div> */}
+            {/* <div className={styles.modal_flex_body}> */}
+              {/* <p>{Object.keys(cohort).find(key => cohort[key].image === src)}</p> */}
+         
+
+
+
+            {/* <a href="/" className={styles.modal_close} onClick={closeModal} onKeyDown={this.handleKeyDown}>&times;</a> */}
+            {/* {hasPrev && <a href="/" className={styles.modal_prev} onClick={findPrev} onKeyDown={this.handleKeyDown}>&lsaquo;</a>} */}
+            {/* {hasNext && <a href="/" className={styles.modal_next} onClick={findNext} onKeyDown={this.handleKeyDown}>&rsaquo;</a>} */}
           </div>
         </div>
       </div>
