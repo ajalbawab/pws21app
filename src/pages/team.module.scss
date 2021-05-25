@@ -17,7 +17,6 @@ body {
 //   padding: 0.9375rem 0;
 // }
 .gallery_container h1 {
-  // margin: 2rem 0;
   padding: 0;
   margin-left: 10px;
   margin-right: 10px;
@@ -29,9 +28,9 @@ body {
 }
 .gallery_container .h1container {
   background-color: rgba(34, 34, 34, 0.892);
-width: fit-content;
-margin: 0 auto;
-border-radius: 10px;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
 .gallery_grid {
@@ -59,20 +58,21 @@ border-radius: 10px;
   top: 0;
   left: 0;
 }
-// .modal_body a {
-//   // position: absolute;
-//   // display: inline;
-//   color: black;
-//   text-decoration: none;
-//   line-height: 36px;
-//   font-size: 30px;
-//   font-weight: lighter;
-//   background: #fff;
-//   border-radius: 10;
-//   // height: 40px;
-//   // width: 40px;
-//   // text-align: center;
-// }
+.modal_body a {
+  position: absolute;
+  display: inline;
+  color: black;
+  text-decoration: none;
+  line-height: 36 px;
+  font-size: 30px;
+  font-weight: lighter;
+  background: #fff;
+  border-radius: 10;
+
+  height: 4%;
+  width: 4%;
+  text-align: center;
+}
 .modal_body .modal_close {
   right: 0;
   top: 0;
@@ -96,7 +96,6 @@ border-radius: 10px;
   display: flex;
   background-color: rgb(196, 196, 196);
   padding: 10px;
-
 }
 .gallery_grid .imgBlock {
   position: relative;
@@ -135,38 +134,34 @@ border-radius: 10px;
   }
 }
 
-
-
-
-
 @media only screen and (max-width: 600px) {
-
-  .modal_body .modal_lightdetails  { 
-     font-size: .5em; 
+  .modal_body .modal_lightdetails {
+    font-size: 0.5em;
   }
-
+  .modal_body a {
+    overflow: hidden;
+    height: 15px;
+    width: 15px;
+  }
 }
 
 .modal_body .modal_text_box {
-  flex:1
+  flex: 1;
 }
 .modal_body .body_container {
   margin-left: 20px;
 }
 
-
-
 .modal_body .modal_header {
   text-align: center;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 3vw;
 }
 .modal_body .modal_lightdetails {
   flex-direction: column;
   text-align: left;
-  
+
   display: flex;
-  
 }
 .modal_body .modal_flex_image {
   max-width: 170px;
@@ -179,10 +174,11 @@ border-radius: 10px;
 .modal {
   position: fixed;
   z-index: 999;
-  width: 50%;
-  max-width: 600px;
-  top: 50%;
+  width: 80%;
+  max-width: 1000px;
+  top: 35%;
   left: 50%;
+  border-radius: 10px;
+  overflow: hidden;
   transform: translate3d(-50%, -50%, 0);
-  // border-radius:10%;
 }

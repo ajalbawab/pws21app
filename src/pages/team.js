@@ -1,7 +1,7 @@
 
 import React from 'react';
 import styles from "./team.module.scss"
-import AppBackground from "../components/AppBackground"
+
 
 
 const cohort = {
@@ -68,16 +68,17 @@ class Gallery extends React.Component {
     this.renderImageContent = this.renderImageContent.bind(this);
   }
   renderImageContent(src, index) {
-
+   
     return (
       <div>
 
       <div className={styles.imgBlock} onClick={(e) => this.openModal(e, index)}>
         <img src={src} alt='' key={src} style={{}} />
         </div>
-        <div style={{margin:10, backgroundColor:'white',borderRadius:10}}>
+        <div style={{marginBottom:10,marginTop:5,marginLeft:20,marginRight:20, backgroundColor:'white',borderRadius:10}}>
         <p style={{textAlign:'center', color:'black'}}>
-          {Object.keys(cohort).find(key => cohort[key] === src)}
+
+          {Object.keys(cohort).find(key => cohort[key].image === src)}
         </p>
       </div>
       </div>
@@ -172,15 +173,15 @@ class GalleryModal extends React.Component {
 
 
                <div className={styles.modal_lightdetails}>
-                 <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>GPA:</div>{cohort[Object.keys(cohort).find(key => cohort[key].image === src)].gpa}</div>
-                 <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>Class Designation:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].classstanding}</div>
-                 <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>Interest:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].interests}</div>
+                 {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].gpa && <div style={{display:'flex',flexDirection:'column'}}><div style={{fontWeight:'bold',marginRight:10}}>GPA:</div>{cohort[Object.keys(cohort).find(key => cohort[key].image === src)].gpa}</div>}
+                 {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].classstanding && <div style={{display:'flex',flexDirection:'column'}}><div style={{fontWeight:'bold',marginRight:10}}>Class Designation:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].classstanding}</div>}
+                 {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].interests && <div style={{display:'flex',flexDirection:'column'}}><div style={{fontWeight:'bold',marginRight:10}}>Interest:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].interests}</div>}
                </div>
-               <div style={{height:2, backgroundColor:'darkgrey', marginTop:10, marginBottom:10}}> </div>
+               {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].interests && cohort[Object.keys(cohort).find(key => cohort[key].image === src)].classstanding && cohort[Object.keys(cohort).find(key => cohort[key].image === src)].gpa && <div style={{height:2, backgroundColor:'darkgrey', marginTop:10, marginBottom:10}}> </div>}
                <div className={styles.modal_lightdetails}>
-                 <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>Biography:</div>{cohort[Object.keys(cohort).find(key => cohort[key].image === src)].bio}</div>
-                 <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>Accomplishments:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].accomplishments}</div>
-                 <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>Resume:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].resume}</div>
+               {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].bio && <div style={{display:'flex',flexDirection:'column'}}><div style={{fontWeight:'bold',marginRight:10}}>Biography:</div>{cohort[Object.keys(cohort).find(key => cohort[key].image === src)].bio}</div>}
+                 {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].accomplishments && <div style={{display:'flex',flexDirection:'column'}}><div style={{fontWeight:'bold',marginRight:10}}>Accomplishments:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].accomplishments}</div>}
+                 {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].resume && <div style={{display:'flex',flexDirection:'column'}}><div style={{fontWeight:'bold',marginRight:10}}>Resume:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].resume}</div>}
                </div>
 
 
@@ -189,10 +190,7 @@ class GalleryModal extends React.Component {
              
               </div>
               
-            {/* <div className={styles.modal_flex_body}> */}
-              {/* <p>{Object.keys(cohort).find(key => cohort[key].image === src)}</p> */}
-         
-
+          
 
 
             {/* <a href="/" className={styles.modal_close} onClick={closeModal} onKeyDown={this.handleKeyDown}>&times;</a> */}
