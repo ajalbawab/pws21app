@@ -1,11 +1,11 @@
 
 import React from 'react';
 import styles from "./team.module.scss"
-import { Document } from 'react-pdf'  
 import { Link } from 'react-router-dom';
 
 const cohort = {
-  'AJ Al-Bawab':{
+  'aalbawab':{
+    'name':'AJ Al-Bawab',
     'image':'/cohort/aj.jpeg',
     'classstanding':'Senior',
     'major':'Finance',
@@ -16,39 +16,56 @@ const cohort = {
     'resume':"/resumes/aj.pdf"
     },
 
-  'Jael Ortiz':{
+  'jortiz':{
+    'name':'Jael Ortiz',
     'image':'/cohort/jael.jpeg'},
-  'Bronson Slattery':{
+  'bslattery':{
+    'name':'Bronson Slattery',
     'image': '/cohort/bronson.jpeg'},
-  'Cameron Vandewiele':{
+  'cvandewiele':{
+    'name':'Cameron Vandewiele',
     'image':'/cohort/cameron.jpeg' },
-  'Armani Cato':{
+  'acato':{
+    'name':'Armani Cato',
     'image': '/cohort/cato.jpeg'},
-  'Cherechi Amalaha':{
+  'camalaha':{
+    'name':'Cherechi Amalaha',
     'image': '/cohort/cher.jpeg'},
-  'Georgia Green':{
+  'ggreen':{
+    'name':'Georgia Green',
     'image': '/cohort/georgia.jpeg'},
-  'Jenelle Ryan':{
+  'jryan':{
+    'name':'Jenelle Ryan',
     'image':'/cohort/jenelle.jpeg' },
-  'Jennifer Cruz':{
+  'jcruz':{
+    'name':'Jennifer Cruz',
     'image':'/cohort/jennifer.jpeg' },
-  'Jonghwa Baek':{
+  'jbaek':{
+    'name':'Jonghwa Baek',
     'image': '/cohort/jonghwa.jpeg'},
-  'Leonard Cave':{
+  'lcave':{
+    'name':'Leonard Cave',
     'image': '/cohort/leonard.jpeg'},
-  'Milton Wilkes':{
+  'mwilkes':{
+    'name':'Milton Wilkes',
     'image': '/cohort/milton.jpeg'},
-  'Minh Le':{
+  'mle':{
+    'name':'Minh Le',
     'image': '/cohort/minh.jpeg'},
-  'Nicky Park':{
+  'npark':{
+    'name':'Nicky Park',
     'image': '/cohort/nicky.jpeg'},
-  'Pranshu Srivastav': {
+  'psrivastav': {
+    'name':'Pranshu Srivastav',
     'image':'/cohort/pranshu.jpeg'},
-  'Randall Anderson': {
+  'randerson': {
+    'name':'Randall Anderson',
     'image':'/cohort/randall.jpeg'},
-  'Reed Deane':{
+  'rdeane':{
+    'name':'Reed Deane',
     'image': '/cohort/reed.jpeg'},
-  'Will Long': {
+  'wlong': {
+    'name':'Will Long',
     'image':'/cohort/will.jpeg'}}
 
 
@@ -78,7 +95,7 @@ class Gallery extends React.Component {
         <div style={{marginBottom:10,marginTop:5,marginLeft:20,marginRight:20, backgroundColor:'white',borderRadius:10}}>
         <p style={{textAlign:'center', color:'black'}}>
 
-          {Object.keys(cohort).find(key => cohort[key].image === src)}
+          {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].name}
         </p>
       </div>
       </div>
@@ -170,7 +187,7 @@ class GalleryModal extends React.Component {
             <img className={styles.modal_flex_image} src={src} alt="" />
               <div className={styles.modal_text_box}>
                <div className={styles.modal_header}>
-                 <p>{Object.keys(cohort).find(key => cohort[key].image === src)}</p>
+                 <p>{cohort[Object.keys(cohort).find(key => cohort[key].image === src)].name}</p>
                </div>
 
               <div className={styles.body_container}>
@@ -188,7 +205,7 @@ class GalleryModal extends React.Component {
                 <div className={styles.modal_button}>
 
               
-               <Link className={styles.modal_link} to="/member">Full Details</Link>
+               <Link className={styles.modal_link} to={{pathname: "/member", membername: Object.keys(cohort).find(key => cohort[key].image === src), members:cohort}} >Full Details</Link>
                 </div>
 
                  {/* {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].accomplishments && <div style={{display:'flex',flexDirection:'column'}}><div style={{fontWeight:'bold',marginRight:10}}>Accomplishments:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].accomplishments}</div>} */}
