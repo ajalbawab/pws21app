@@ -1,8 +1,8 @@
 
 import React from 'react';
 import styles from "./team.module.scss"
-
-
+import { Document } from 'react-pdf'  
+import { Link } from 'react-router-dom';
 
 const cohort = {
   'AJ Al-Bawab':{
@@ -13,7 +13,7 @@ const cohort = {
     'interests':'Coffee',
     'bio':'Insert Biography Here',
     'accomplishments':'Insert Accomplishments Here',
-    'resume':'Will have resume attached'
+    'resume':"/resumes/aj.pdf"
     },
 
   'Jael Ortiz':{
@@ -153,7 +153,11 @@ class GalleryModal extends React.Component {
     if (e.keyCode === 39 && this.props.hasNext)
       this.props.findNext();
   }
+
+
+  
   render () {
+    const path = './resumes/aj.pdf'
     const { closeModal, hasNext, hasPrev, findNext, findPrev, src } = this.props;
     if (!src) {
       return null;
@@ -178,13 +182,20 @@ class GalleryModal extends React.Component {
                  {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].interests && <div style={{display:'flex',flexDirection:'column'}}><div style={{fontWeight:'bold',marginRight:10}}>Interest:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].interests}</div>}
                </div>
                {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].interests && cohort[Object.keys(cohort).find(key => cohort[key].image === src)].classstanding && cohort[Object.keys(cohort).find(key => cohort[key].image === src)].gpa && <div style={{height:2, backgroundColor:'darkgrey', marginTop:10, marginBottom:10}}> </div>}
+
                <div className={styles.modal_lightdetails}>
-               {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].bio && <div style={{display:'flex',flexDirection:'column'}}><div style={{fontWeight:'bold',marginRight:10}}>Biography:</div>{cohort[Object.keys(cohort).find(key => cohort[key].image === src)].bio}</div>}
-                 {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].accomplishments && <div style={{display:'flex',flexDirection:'column'}}><div style={{fontWeight:'bold',marginRight:10}}>Accomplishments:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].accomplishments}</div>}
-                 {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].resume && <div style={{display:'flex',flexDirection:'column'}}><div style={{fontWeight:'bold',marginRight:10}}>Resume:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].resume}</div>}
+               {/* {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].bio && <div style={{display:'flex',flexDirection:'column'}}><div style={{fontWeight:'bold',marginRight:10}}>Biography:</div>{cohort[Object.keys(cohort).find(key => cohort[key].image === src)].bio}</div>} */}
+                <div className={styles.modal_button}>
+
+              
+               <Link className={styles.modal_link} to="/member">Full Details</Link>
+                </div>
+
+                 {/* {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].accomplishments && <div style={{display:'flex',flexDirection:'column'}}><div style={{fontWeight:'bold',marginRight:10}}>Accomplishments:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].accomplishments}</div>} */}
+                 {/* {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].resume && <div style={{display:'flex',flexDirection:'column'}}><div style={{fontWeight:'bold',marginRight:10}}>Resume:</div> {cohort[Object.keys(cohort).find(key => cohort[key].image === src)].resume}</div>} */}
+            
+               {/* <a href={cohort[Object.keys(cohort).find(key => cohort[key].image === src)].resume}>Click here for my pdf</a> */}
                </div>
-
-
 
               </div>
              

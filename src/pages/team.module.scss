@@ -159,10 +159,35 @@ body {
 }
 .modal_body .modal_lightdetails {
   flex-direction: column;
-  text-align: left;
-
   display: flex;
 }
+.modal_body .modal_button {
+  // background-color: black;
+  height: 60px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.modal_body .modal_link {
+  display: flex;
+  border-color: rgb(0, 0, 0);
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 5px;
+  background-color: lightgrey;
+  height: 10px;
+  width: auto;
+  font-size: inherit;
+  color: black;
+  align-items: center;
+  font-weight: bold;
+  padding: 20px;
+}
+
 .modal_body .modal_flex_image {
   max-width: 170px;
   width: 30%;
