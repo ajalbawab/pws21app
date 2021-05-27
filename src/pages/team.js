@@ -185,9 +185,7 @@ class GalleryModal extends React.Component {
 const Team = () => {
   return (
     <div>
-      <section class={styles.gallery_container}>
       <Gallery />
-      </section>
     </div>
   );
 };

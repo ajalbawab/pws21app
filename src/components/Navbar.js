@@ -8,7 +8,7 @@ const NavBar = () => {
 
   return (
  
-    <Navbar bg="dark" variant="dark" style={{position:'fixed',width:'100%',top:0, zIndex:1}}>
+    <Navbar bg="dark" variant="dark" style={{position:'sticky',width:'100%',top:0, zIndex:1}}>
   
 
     <Navbar.Brand href="/">

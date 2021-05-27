@@ -9,7 +9,6 @@ function AppBackground({children}) {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundAttachment:'fixed',
-           
             }}
             >
      

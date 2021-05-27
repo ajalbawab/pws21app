@@ -17,9 +17,9 @@ function App() {
   return (
     <AppBackground>
     
-    <div>
     <Router>
     <Navbar/>
+
     <Switch>
     <Route path='/' exact component={Home} />
     <Route path='/error' component={ErrorPage} />
@@ -30,7 +30,6 @@ function App() {
     <Redirect from='*' to='/error' />
     </Switch>
     </Router>
-    </div>
      </AppBackground>
   );
 }

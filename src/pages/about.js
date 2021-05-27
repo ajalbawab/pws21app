@@ -7,15 +7,14 @@ function About () {
   
     <div>
     <section class={styles.gallery_container}>
-    <div style={{height: '100vh'}}>
-
+ 
     <div className={styles.gallery_container}>
       <div className={styles.h1container}>
 
       <h1>About</h1>
       </div>
     </div>
-  </div>
+
     </section>
     </div>
   
