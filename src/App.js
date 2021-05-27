@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 // import './App.css';
 import Navbar from './components/Navbar';
-import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { Router as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Home from './pages';
 import About from './pages/about';
 import Team from './pages/team';
@@ -9,7 +9,7 @@ import Contact from './pages/contact';
 import ErrorPage from './pages/errorpage';
 import AppBackground from './components/AppBackground';
 import Member from './pages/member';
-  
+import history from './myCreatedHistory';
 
 
 
@@ -17,7 +17,7 @@ function App() {
   return (
     <AppBackground>
     
-    <Router>
+    <Router history={history}>
     <Navbar/>
 
     <Switch>

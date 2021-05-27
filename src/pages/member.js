@@ -13,8 +13,7 @@ class Member extends React.Component {
   render() {
     const cohort = this.props.location.members;
     const member = this.props.location.membername;
-    console.log(member)
-    console.log(cohort[member])
+
 
     return (
       <div>
@@ -47,7 +46,8 @@ class Member extends React.Component {
                <div className={styles.modal_deepdetails}>
                {cohort[member].bio && <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>Biography:</div>{cohort[member].bio}</div>}
                  {cohort[member].accomplishments && <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>Accomplishments:</div> {cohort[member].accomplishments}</div>}
-                 {cohort[member].resume && <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>Resume:</div> {cohort[member].resume}</div>}
+                 {cohort[member].resume && <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>Resume:   </div><a href={cohort[member].resume}>Click to view {cohort[member].name }'s' resume</a></div>}
+                 
                </div>
               </div>
               </div>
