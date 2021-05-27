@@ -19,7 +19,7 @@ function App() {
     
     <div>
     <Router>
-    <Navbar />
+    <Navbar/>
     <Switch>
     <Route path='/' exact component={Home} />
     <Route path='/error' component={ErrorPage} />

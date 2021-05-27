@@ -5,15 +5,19 @@ import styles from "./contact.module.css"
 const Contact = () => {
   return (
   
+    <div>
+    <section class={styles.gallery_container}>
     <div style={{height: '100vh'}}>
 
-    <div className={styles.appbody}>
-     
+    <div className={styles.gallery_container}>
+      <div className={styles.h1container}>
 
-    <h1  className={styles.header1}>Contact</h1>
+      <h1>Contact</h1>
       </div>
-  
-     </div>
+    </div>
+  </div>
+    </section>
+    </div>
   );
 };
   

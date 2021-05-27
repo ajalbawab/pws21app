@@ -1,20 +1,133 @@
-.appbody {
-  margin: 10px auto;
-  border-radius: 10px;
-  background-color: rgba(34, 34, 34, 0.892);
-  width: 50%;
-  text-align: center;
-  width: fit-content;
-border-radius: 10px;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
-.header1 {
-  
- 
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: helvetica;
+  position: relative;
+  font-size: 100%;
+}
+.gallery_container {
+  padding: 0.9375rem 0;
+
+}
+.gallery_container h1 {
+  padding: 0;
   margin-left: 10px;
   margin-right: 10px;
   text-align: center;
   color: #fff;
-  text-transform: uppercase;
   font-size: 3vw;
   font-weight: lighter;
+}
+.gallery_container .h1container {
+  background-color: rgba(34, 34, 34, 0.892);
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+
+.gallery_container {
+  margin-top: 1rem;
+}
+
+
+
+.modal_body {
+  display: flex;
+  background-color: rgba(196, 196, 196, 0.672);
+  padding: 10px;
+  width:70%;
+  border-radius: 10px;
+
+}
+.modalContainer{
+  display: flex;
+  justify-content: center;
+  flex:1;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal_body .modal_firstlightdetails {
+    font-size: 0.5em;
+  }
+  .modal_body .modal_deepdetails {
+    font-size: 0.5em;
+  }
+  .modal_body a {
+    overflow: hidden;
+    height: 15px;
+    width: 15px;
+  }
+}
+
+.modal_body .modal_text_box {
+  flex: 1;
+}
+.modal_body .body_container {
+  margin-left: 20px;
+}
+
+.modal_body .modal_header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 3vw;
+}
+.modal_body .modal_firstlightdetails {
+  flex-direction: column;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.652);
+  padding: 5px;
+  border-radius: 10px;
+  
+}
+.modal_body .modal_deepdetails {
+  flex-direction: column;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.652);
+  padding: 5px;
+  border-radius: 10px;
+  
+}
+.modal_body .modal_button {
+  // background-color: black;
+  height: 60px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.modal_body .modal_link {
+  display: flex;
+  border-color: rgb(0, 0, 0);
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 5px;
+  background-color: lightgrey;
+  height: 10px;
+  width: auto;
+  font-size: inherit;
+  color: black;
+  align-items: center;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.modal_body .modal_flex_image {
+  max-width: 170px;
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 10px;
 }

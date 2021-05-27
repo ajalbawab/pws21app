@@ -13,9 +13,9 @@ body {
   position: relative;
   font-size: 100%;
 }
-// .gallery_container {
-//   padding: 0.9375rem 0;
-// }
+.gallery_container {
+  padding: 0.9375rem 0;
+}
 .gallery_container h1 {
   padding: 0;
   margin-left: 10px;
@@ -48,6 +48,7 @@ body {
 }
 .gallery_container {
   padding: 0.9375rem 0;
+  margin-top: 1rem;
 }
 .modal_overlay {
   position: fixed;

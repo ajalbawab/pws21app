@@ -7,7 +7,10 @@ const NavBar = () => {
 
 
   return (
-    <Navbar bg="dark" variant="dark">
+ 
+    <Navbar bg="dark" variant="dark" style={{position:'fixed',width:'100%',top:0, zIndex:1}}>
+  
+
     <Navbar.Brand href="/">
     <img
     src="\pws.svg"
@@ -15,7 +18,7 @@ const NavBar = () => {
     height="30"
     className="d-inline-block align-top"
     alt="PWS21"
-  />
+    />
     </Navbar.Brand>
     <Nav className="mr-auto">
       <Nav.Link href="#/about">About</Nav.Link>
@@ -23,10 +26,12 @@ const NavBar = () => {
       <Nav.Link href="#/contact">Contact</Nav.Link>
     </Nav>
     <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-info">Search</Button>
+      {/* <FormControl type="text" placeholder="Search" className="mr-sm-2" /> */}
+      {/* <Button variant="outline-info">Search</Button> */}
     </Form>
+    
   </Navbar>
+   
   );
 };
 

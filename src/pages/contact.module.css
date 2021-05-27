@@ -1,15 +1,13 @@
-.appbody {
-  margin: 10px auto;
-  border-radius: 10px;
-  background-color: rgba(34, 34, 34, 0.892);
-  width: 50%;
-  text-align: center;
-  width: fit-content;
-border-radius: 10px;
+body {
+  font-family: helvetica;
+  position: relative;
+  font-size: 100%;
 }
-.header1 {
-  
- 
+.gallery_container {
+  padding: 0.9375rem 0;
+}
+.gallery_container h1 {
+  padding: 0;
   margin-left: 10px;
   margin-right: 10px;
   text-align: center;
@@ -17,4 +15,16 @@ border-radius: 10px;
   text-transform: uppercase;
   font-size: 3vw;
   font-weight: lighter;
+}
+.gallery_container .h1container {
+  background-color: rgba(34, 34, 34, 0.892);
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+
+.gallery_container {
+  padding: 0.9375rem 0;
+  margin-top: 1rem;
 }

@@ -3,14 +3,18 @@ import styles from "./index.module.css"
   
 const Home = () => {
   return (
-    <div style={{height:'100vh'}}>
+    <div>
+    <section class={styles.gallery_container}>
+    <div style={{height: '100vh'}}>
 
-<div className={styles.appbody}>
-     
+    <div className={styles.gallery_container}>
+      <div className={styles.h1container}>
 
-     <h1  className={styles.header1}>PWS 21</h1>
-       </div>
-   
+      <h1>PWS21</h1>
+      </div>
+    </div>
+  </div>
+    </section>
     </div>
   );
 };
