@@ -1,19 +1,19 @@
 
 import React from 'react';
 import styles from "./member.module.scss"
-
-
-
+import queryString from 'query-string';
+import cohort from '../cohort'
 
 
 
 
 class Member extends React.Component {
-
+  
   render() {
-    const cohort = this.props.location.members;
-    const member = this.props.location.membername;
-
+    const values = queryString.parse(this.props.location.search);
+    const id = values.q
+    let member = Object.keys(cohort).find(key => cohort[key].name === id)
+    console.log(member)
 
     return (
       <div>

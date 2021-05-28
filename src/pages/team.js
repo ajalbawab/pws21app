@@ -151,7 +151,7 @@ class GalleryModal extends React.Component {
 
                <div className={styles.modal_lightdetails}>
                 <div className={styles.modal_button}>
-               <Link className={styles.modal_link} to={{pathname: "/member", membername: Object.keys(cohort).find(key => cohort[key].image === src), members:cohort}} >Full Details</Link>
+               <Link className={styles.modal_link} to={{pathname: ('/member?q='+ cohort[Object.keys(cohort).find(key => cohort[key].image === src)].name)}} >Full Details</Link>
                 </div>
                </div>
               </div>
