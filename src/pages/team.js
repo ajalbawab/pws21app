@@ -1,24 +1,21 @@
 import React from 'react';
 import styles from "./team.module.scss"
 import { Link } from 'react-router-dom';
-import cohortdata from '../cohort'
+import  cohortdata from '../cohort'
 
 
 
-function fisherYates ( myArray ) {
-  var m = Object.keys(myArray).length, t, i;
-    while ( m ) { 
-      
-      i = Math.floor(Math.random() * --m);
-        
-        t = myArray[m];
-        myArray[m] = myArray[i];
-        myArray[i] = t;
-    }
-    return myArray;
-}
+function shuffleObject(obj){
+  let newObj = {};
+  var keys = Object.keys(obj);
+    keys.sort(function(a,b){return Math.random()- 0.5;});
+    keys.forEach(function(k) {
+        newObj[k] = obj[k];
+  });
+  return newObj;
+  }
 
-const cohort = fisherYates(cohortdata)
+const cohort = shuffleObject(cohortdata)
 const listItems = []
 
 Object.keys(cohort).map((key) => listItems.push(cohort[key].image));
@@ -151,7 +148,7 @@ class GalleryModal extends React.Component {
 
                <div className={styles.modal_lightdetails}>
                 <div className={styles.modal_button}>
-               <Link className={styles.modal_link} to={{pathname: ('/member?q='+ cohort[Object.keys(cohort).find(key => cohort[key].image === src)].name)}} >Full Details</Link>
+               <Link className={styles.modal_link}  to={('/member?q='+ Object.keys(cohort).find(key => cohort[key].image === src) )} >Full Details</Link>
                 </div>
                </div>
               </div>

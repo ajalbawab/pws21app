@@ -7,12 +7,15 @@ import cohort from '../cohort'
 
 
 
+
 class Member extends React.Component {
   
+
+
   render() {
     const values = queryString.parse(this.props.location.search);
     const id = values.q
-    let member = Object.keys(cohort).find(key => cohort[key].name === id)
+    let member = Object.keys(cohort).find(key => key === id)
     console.log(member)
 
     return (

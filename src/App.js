@@ -10,7 +10,7 @@ import ErrorPage from './pages/errorpage';
 import AppBackground from './components/AppBackground';
 import Member from './pages/member';
 import history from './myCreatedHistory';
-
+import {withRouter} from 'react-router'
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
     <Route path='/about' component={About} />
     <Route path='/team' component={Team} />
     <Route path='/contact' component={Contact} />
-    <Route path={["/member/:q?"]}  component={Member} />
+    <Route path={"/member/:q?"}  component={Member} />
     {/* <Redirect from='*' to='/error' /> */}
     </Switch>
     </Router>
