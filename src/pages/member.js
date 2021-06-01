@@ -16,7 +16,6 @@ class Member extends React.Component {
     const values = queryString.parse(this.props.location.search);
     const id = values.q
     let member = Object.keys(cohort).find(key => key === id)
-    console.log(member)
 
     return (
       <div>

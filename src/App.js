@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 // import './App.css';
 import Navbar from './components/Navbar';
-import { Router as Router, Switch, Route, Redirect } from 'react-router-dom';
+import {  Router, Switch, Route, Redirect } from 'react-router-dom';
 import Home from './pages';
 import About from './pages/about';
 import Team from './pages/team';
@@ -10,7 +10,6 @@ import ErrorPage from './pages/errorpage';
 import AppBackground from './components/AppBackground';
 import Member from './pages/member';
 import history from './myCreatedHistory';
-import {withRouter} from 'react-router'
 
 
 function App() {
@@ -27,7 +26,7 @@ function App() {
     <Route path='/team' component={Team} />
     <Route path='/contact' component={Contact} />
     <Route path={"/member/:q?"}  component={Member} />
-    {/* <Redirect from='*' to='/error' /> */}
+    <Redirect from='*' to='/error' />
     </Switch>
     </Router>
      </AppBackground>
