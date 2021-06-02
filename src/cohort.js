@@ -38,7 +38,31 @@ const cohortdata1 = {
     'image':'/cohort/jennifer.jpeg' },
   'jbaek':{
     'name':'Jonghwa Baek',
-    'image': '/cohort/jonghwa.jpeg'},
+    'image': '/cohort/jonghwa.jpeg',
+    'classstanding':'Masters',
+    'major':'Finance',
+    'gpa':'4.06',
+    'interests':'Finance Literacy Improvement, Investment, Golf',
+    'bio':`
+    Jonghwa Baek is a finance professional who wants to grow along with steadfast
+    growing innovations & digital transformation in the finance industry.\n
+    
+    Before studying the Master’s program, Jonghwa spent 3 years serving as a
+    military officer and the other 3 years as an analyst in credit and compliance
+    domain at top global banks, like Credit Agricole CIB in Singapore. Jonghwa
+    now wants to gain solid understanding how FinTech is shaping financial
+    service sector, and to apply such knowledges and skillsets to a new career.
+    
+    Jonghwa enjoys playing golfs and learning fundamental financial analysis
+    through CFA program(CFA Level 3 candidate in 2021).
+    
+    Jonghwa is looking forward to connecting with those who want to become a
+    leader in the finance. You can reach Jonghwa at jbaek8@student.gsu.edu.`,
+    'accomplishments':'I served as a military officer for more than 3 years. And I recently took the last level of CFA exam and waiting for the result.',
+    'resume':"/resumes/jbaek.pdf"
+  
+  
+  },
   'lcave':{
     'name':'Leonard Cave',
     'image': '/cohort/leonard.jpeg'},

@@ -16,9 +16,10 @@ class Member extends React.Component {
     const values = queryString.parse(this.props.location.search);
     const id = values.q
     let member = Object.keys(cohort).find(key => key === id)
-
+    console.log(cohort[member].bio)
     return (
       <div>
+
       <section class={styles.gallery_container}>
       <div style={{height: '94vh'}}>
 
@@ -46,7 +47,7 @@ class Member extends React.Component {
                </div>
                {cohort[member].gpa && cohort[member].classstanding && cohort[member].interests && <div style={{height:2, backgroundColor:'black', marginTop:10, marginBottom:10}}> </div>}
                <div className={styles.modal_deepdetails}>
-               {cohort[member].bio && <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>Biography:</div>{cohort[member].bio}</div>}
+               {cohort[member].bio && <div style={{display:'flex', marginBottom:10}}><div style={{fontWeight:'bold',marginRight:10}}>Biography:</div>{cohort[member].bio}</div>}
                  {cohort[member].accomplishments && <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>Accomplishments:</div> {cohort[member].accomplishments}</div>}
                  {cohort[member].resume && <div style={{display:'flex'}}><div style={{fontWeight:'bold',marginRight:10}}>Resume:   </div><a href={cohort[member].resume}>Click to view {cohort[member].name }'s' resume</a></div>}
                  
