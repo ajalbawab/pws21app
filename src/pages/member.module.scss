@@ -46,7 +46,6 @@ body {
   padding: 10px;
   width:70%;
   border-radius: 10px;
-
 }
 .modalContainer{
   display: flex;
@@ -54,19 +53,6 @@ body {
   flex:1;
 }
 
-@media only screen and (max-width: 600px) {
-  .modal_body .modal_firstlightdetails {
-    font-size: 0.5em;
-  }
-  .modal_body .modal_deepdetails {
-    font-size: 0.5em;
-  }
-  .modal_body a {
-    overflow: hidden;
-    height: 15px;
-    width: 15px;
-  }
-}
 
 .modal_body .modal_text_box {
   flex: 1;
@@ -131,4 +117,31 @@ body {
   object-fit: cover;
   border: 5px solid rgb(255, 255, 255);
   border-radius: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .modal_body .modal_firstlightdetails {
+    font-size: 0.5em;
+  }
+  .modal_body .modal_deepdetails {
+    font-size: 0.5em;
+  }
+
+  .modal_body .modal_flex_image {
+    max-width: 170px;
+    width: 30%;
+    height: 100%;
+    max-height: 150px;
+    // object-fit: cover;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 10px;
+  }
+  .modal_body {
+    display: flex;
+    background-color: rgba(196, 196, 196, 0.672);
+    padding: 10px;
+    width:98%;
+    border-radius: 10px;
+  }
+
+
 }
