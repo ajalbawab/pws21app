@@ -58,7 +58,7 @@ body {
   flex: 1;
 }
 .modal_body .body_container {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .modal_body .modal_header {
@@ -118,7 +118,7 @@ body {
   border: 5px solid rgb(255, 255, 255);
   border-radius: 10px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 990px) {
   .modal_body .modal_firstlightdetails {
     font-size: 0.5em;
   }
