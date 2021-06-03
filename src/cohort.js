@@ -34,7 +34,18 @@ const cohortdata1 = {
     'image': '/cohort/georgia.jpeg'},
   'jryan':{
     'name':'Jenelle Ryan',
-    'image':'/cohort/jenelle.jpeg' },
+    'image':'/cohort/jenelle.jpeg',
+    'classstanding':'Senior',
+    'major':'Risk Management and Insurance',
+    'gpa':'3.39',
+    'interests':'Reading, Writing, Painting, Sewing',
+    'bio':"Jenelle Ryan is a Senior Risk Management and Insurance major and Business Law minor at Georgia State University’s J. Mack Robinson College of Business. She currently serves as the Co-President of Gamma Iota Sigma Zeta chapter, having previously served as the chapter’s first Recruitment Chair in 2020. \n\nThrough Zeta Chapter, Jenelle has had the opportunity to organize and host panels with dozens of professionals from industry giants such as New York Life, Truist Insurance Holdings, and Capitol One. She is passionate about staying involved with her community at GSU, serving as the Bylaws Committee Chair for the Student Government Association, in addition to mentoring students for both the GIS Zeta Mentorship Program and the ZetaPROWLS Mentorship program. She additionally participated as a mentee in the Berkshire Hathaway Specialty Insurance Mentorship Program and the Risk and Insurance Management Society Mentorship Program this past year, eager to enrich her knowledge of the insurance industry and its related financial markets.\n\nIn her free time Jenelle enjoys writing, painting, and caring for the cashmere goats on her family's farm. You can reach Jenelle at jryan10@student.gsu.edu, or connect with her on LinkedIn.",
+    'accomplishments':'Founder of the GIS Zeta Chapter Ambassador Program, Founder of the ZetaPROWLS High School Mentorship Program',
+    'clubs':'Gamma Iota Sigma Zeta Chapter, GSU Student Government Association',
+    'scholarships':'2020 Starr and RIMS Scholarship, Hope Scholarship, Admissions Foundation Scholarship',
+    'resume':"/resumes/jryan.pdf" },
+
+
   'jcruz':{
     'name':'Jennifer Cruz',
     'image':'/cohort/jennifer.jpeg',
