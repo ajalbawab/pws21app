@@ -37,7 +37,16 @@ const cohortdata1 = {
     'image':'/cohort/jenelle.jpeg' },
   'jcruz':{
     'name':'Jennifer Cruz',
-    'image':'/cohort/jennifer.jpeg' },
+    'image':'/cohort/jennifer.jpeg',
+    'classstanding':'Junior',
+    'major':'Finance',
+    'gpa':'3.8',
+    'interests':'Traveling, Hiking, Trying New Restaurants, Coffee, Learning New Languages, Reading, Yoga, and Cycling',
+    'bio':'Jennifer Cruz is an adaptable and highly driven finance student in the J. Mack Robinson College of Business at Georgia State University. She holds a strong passion for promoting diversity, inclusion and aims to utilize bilingual (English & Spanish) skills in her professional career. \n\nBefore coming to Georgia State, Jennifer has worked for several years in the hospitality industry as a server. She began her business endeavors by creating a bakery company and worked as a freelance makeup artist through middle and high school. Now, she wants to transition her passion for sales and serve others through a career in business, with an interest in Commercial Real Estate and FinTech. \n\nIn her free time, she enjoys trying new foods, traveling to different countries/cities, and advocates for first-generation students. Jennifer is available for career development opportunities, community outreach, and mentoring.',
+    'accomplishments':' Gained experience through 2 internships (Tech and Marketing), Top Sales at a restaurant, and hiked Arikok National Park in Aruba- which includes caves, gold mines/ruins, and Mount Jamanota',
+    'clubs':'Panthers on Wall Street, Eric J. Joiner Achievement Academy, American Marketing Association (AMA), LAUNCH GSU, Management Leadership for Tomorrow Career Prep Program, SEO EDGE, and the First-Generation Coca Cola Scholarship Program',
+    'scholarships':'First Generation Coca Cola Scholarship, Truist Technology Scholarship, The Joiner Achievement Academy Scholarship, E. L. Abbie Abercrombie Scholarship, Corvias Scholarship, and HOPE Scholarship',
+    'resume':"/resumes/jcruz.pdf" },
   'jbaek':{
     'name':'Jonghwa Baek',
     'image': '/cohort/jonghwa.jpeg',
