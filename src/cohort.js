@@ -28,7 +28,16 @@ const cohortdata1 = {
     'image': '/cohort/cato.jpeg'},
   'camalaha':{
     'name':'Cherechi Amalaha',
-    'image': '/cohort/cher.jpeg'},
+    'image': '/cohort/cher.jpeg',
+    'classstanding':'Senior',
+    'major':'Business Economics',
+    'gpa':'3.74',
+    'interests':'Economics, Shopping, Travel, Baking, Art, Archived Fashion, Trader Joes, and Tacos',
+    'bio':"Cherechi Amalaha is a Senior at Georgia State University where she is currently working towards her Bachelor of Business Administration in Business Economics at the Robinson College of Business. She is a member of the Honors College and a recipient of the J. Mack Robinson College of Business Dean's Office Scholarship.\n\nCherechi is a high-achieving student, earning a place on the President’s List and the Dean’s List while taking on challenging coursework. In addition, she was selected from a competitive pool of applicants to attend the BlackRock FinTech Uncovered Expo where she gained knowledge on the operations of financial markets, the importance of financial well-being, and the advancement of technology and how it is shaping the world of business. Cherechi accepted an internship with Goldman Sachs in their Private Wealth Management Division in Dallas, Texas for the Summer of 2021.\n\nCherechi is a scholarship recipient for the Parsons x Complex Streetwear Essentials Program where she is taking courses intended to learn more about the history, influence, and impact of streetwear in fashion. Her passion for fashion is furthermore portrayed in her fashion blog and through her styling services.\n\nCherechi is creative, personable, attentive, and has impeccable attention to detail. She can be reached at camalaha2@student.gsu.edu.",
+    'accomplishments':"I'm in a fashion design class at Parsons!",
+    'clubs':'Panthers on Wall Street, African Student Association, Business Economics Club, Alpha Kappa Psi Professional Business Fraternity, SEO',
+    'scholarships':'J.Mack Robinson College of Business Scholarship',
+    'resume':"/resumes/camalaha.pdf"},
   'ggreen':{
     'name':'Georgia Green',
     'image': '/cohort/georgia.jpeg'},
